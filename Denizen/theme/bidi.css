@@ -412,6 +412,64 @@ li.breadcrumbs span:first-child > a {
 	margin-left: 5px;
 }
 
+.rtl ul.topiclist_recent dt, .rtl li.header dt {
+	float: right;
+	margin-right: 0;
+	margin-left: -440px;
+}
+
+.rtl ul.topiclist_recent.missing-column dt {
+	margin-right: 0;
+	margin-left: -345px;
+}
+
+.rtl ul.topiclist_recent.two-long-columns dt {
+	margin-right: 0;
+	margin-left: -250px;
+}
+
+.rtl ul.topiclist_recent.two-columns dt {
+	margin-right: 0;
+	margin-left: -80px;
+}
+
+.rtl ul.topiclist_recent dt .list-inner {
+	margin-right: 0;
+	margin-left: 440px;
+}
+
+.rtl ul.topiclist_recent.missing-column dt .list-inner {
+	margin-right: 0;
+	margin-left: 330px;
+}
+
+.rtl ul.topiclist_recent.two-long-columns dt .list-inner {
+	margin-right: 0;
+	margin-left: 250px;
+}
+
+.rtl ul.topiclist_recent.two-columns dt .list-inner {
+	margin-right: 0;
+	margin-left: 80px;
+}
+
+.rtl ul.topiclist_recent dd {
+	float: right;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-left: none;
+}
+
+.rtl ul.topiclist_recent dfn {
+	left: auto;
+	right: -999px;
+}
+
+.rtl ul.topiclist_recent li.row dt a.subforum {
+	padding-right: 12px;
+	background-position: right;
+	position: static;
+}
 .rtl li.header dt, .rtl li.header dd {
 	border-right-width: 0;
 }
@@ -449,6 +507,11 @@ li.breadcrumbs span:first-child > a {
 }
 
 .rtl dd.lastpost > span, .rtl ul.topiclist dd.info > span, .rtl ul.topiclist dd.time > span, .rtl dd.redirect > span, .rtl dd.moderation > span {
+	padding-left: 0;
+	padding-right: 5px;
+}
+
+.rtl dd.lastpost > span, .rtl ul.topiclist_recent dd.info > span, .rtl ul.topiclist_recent dd.time > span, .rtl dd.redirect > span, .rtl dd.moderation > span {
 	padding-left: 0;
 	padding-right: 5px;
 }
@@ -1016,6 +1079,37 @@ li.breadcrumbs span:first-child > a {
 		text-align: right !important;
 	}
 
+	.rtl ul.topiclist_recent li.header dt, .rtl ul.topiclist_recent li.header dt .list-inner {
+		margin-left: 0 !important;
+		padding-left: 0;
+	}
+
+	.rtl ul.topiclist_recent dt, .rtl ul.topiclist_recent dt .list-inner,
+	.rtl ul.topiclist_recent.missing-column dt, .rtl ul.topiclist_recent.missing-column dt .list-inner,
+	.rtl ul.topiclist_recent.two-long-columns dt, .rtl ul.topiclist_recent.two-long-columns dt .list-inner,
+	.rtl ul.topiclist_recent.two-columns dt, .rtl ul.topiclist_recent.two-columns dt .list-inner {
+		margin-left: 0;
+	}
+
+	.rtl ul.topiclist_recent dt .list-inner.with-mark {
+		padding-left: 34px;
+	}
+
+	/* Forums and topics lists
+	----------------------------------------*/
+	.rtl ul.topiclist_recent.forums dt {
+		margin-left: -250px;
+	}
+	.rtl ul.topiclist_recent.forums dt .list-inner {
+		margin-left: 250px;
+	}
+
+	.rtl ul.topiclist_recent dd.mark {
+		left: 5px;
+		right: auto;
+		text-align: right;
+	}
+
 	/* User profile
 	----------------------------------------*/
 	.rtl .column1, .rtl .column2, .rtl .left-box.profile-details {
@@ -1065,6 +1159,13 @@ li.breadcrumbs span:first-child > a {
 	}
 
 	.rtl ul.topiclist.forums dt .list-inner {
+		margin-left: 0;
+	}
+	.rtl ul.topiclist_recent.forums dt {
+		margin-left: 0;
+	}
+
+	.rtl ul.topiclist_recent.forums dt .list-inner {
 		margin-left: 0;
 	}
 }

@@ -377,6 +377,27 @@ li.row {
 	background: #FFFFFF;
 }
 
+ul.topiclist_recent li {
+	color: #4C5D77;
+}
+
+ul.topiclist_recent dd {
+	border-left-color: #d7e5f2;
+}
+
+.rtl ul.topiclist_recent dd {
+	border-right-color: #fff;
+	border-left-color: transparent;
+}
+
+ul.topiclist_recent li.row dt a.subforum.read {
+	background-image: url("./images/subforum_read.gif");
+}
+
+ul.topiclist_recent li.row dt a.subforum.unread {
+	background-image: url("./images/subforum_unread.gif");
+}
+
 ul.topiclist li.row:first-child {
     border-top-color: #D7e5F2;
 }
