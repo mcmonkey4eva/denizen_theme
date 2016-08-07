@@ -241,6 +241,16 @@ li.header dl.icon dt .list-inner {
 	padding-right: 38px;
 }
 
+ul.topiclist_recent .triangle {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 5px 5px 5px;
+	border-color: transparent transparent #0B417B transparent;
+	margin-top: -5px;
+	margin-left: 30px;
+}
+
 .triangle {
 	width: 0;
 	height: 0;

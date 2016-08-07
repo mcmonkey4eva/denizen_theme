@@ -249,6 +249,10 @@ ol ol ul, ol ul ul, ul ol ul, ul ul ul {
 	border-bottom: 1px solid;
 }
 
+.recent-topics {
+	font-size: 75%;
+}
+
 .forabg, .forumbg {
 	background: transparent none repeat-x 0 0;
 	margin-bottom: 20px;
