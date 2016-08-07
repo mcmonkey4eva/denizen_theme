@@ -226,6 +226,14 @@ ul.topiclist.forums li.row, ul.topiclist.topics li.row {
     margin: 0 10px;
 }
 
+ul.topiclist_recent.forums, ul.topiclist.topics {
+	padding: 10px 0;	
+}
+
+ul.topiclist_recent.forums li.row, ul.topiclist.topics li.row {
+	margin: 0 10px;
+}
+
 .panel {
 	margin-bottom: 4px;
 	padding: 5px 10px;
@@ -776,6 +784,10 @@ dl.details dd {
 }
 
 .clearfix, fieldset dl, ul.topiclist dl, dl.polls {
+	overflow: hidden;
+}
+
+.clearfix, fieldset dl, ul.topiclist_recent dl, dl.polls {
 	overflow: hidden;
 }
 
