@@ -26,16 +26,39 @@
 
 </div>
 
-<div class="copyright">
-	Absolution Style by <a href="http://www.planetstyles.net/">Premium phpBB Styles</a><br />
+	<div class="copyright">
+		<!-- EVENT overall_footer_copyright_prepend -->
+		<p class="footer-row">
+			Absolution Style by <a href="http://www.planetstyles.net/">Premium phpBB Styles</a><br />
     <a href="http://www.planetstyles.net"><img src="{T_THEME_PATH}/images/credit_line.png" width="140" /></a><br /><br />
-    <!-- EVENT overall_footer_copyright_prepend -->
-    {CREDIT_LINE}
-    <!-- IF TRANSLATION_INFO --><br />{TRANSLATION_INFO}<!-- ENDIF -->
-    <!-- EVENT overall_footer_copyright_append -->
-    <!-- IF DEBUG_OUTPUT --><br />{DEBUG_OUTPUT}<!-- ENDIF -->
-    <!-- IF U_ACP --><br /><strong><a href="{U_ACP}">{L_ACP}</a></strong><!-- ENDIF -->
-</div>
+			<span class="footer-copyright">{{ CREDIT_LINE }}</span>
+		</p>
+		<!-- IF TRANSLATION_INFO -->
+		<p class="footer-row">
+			<span class="footer-copyright">{{ TRANSLATION_INFO }}</span>
+		</p>
+		<!-- ENDIF -->
+		<!-- EVENT overall_footer_copyright_append -->
+		<p class="footer-row">
+			<a class="footer-link" href="{{ U_PRIVACY }}" title="{{ lang('PRIVACY_LINK') }}" role="menuitem">
+				<span class="footer-link-text">{{ lang('PRIVACY_LINK') }}</span>
+			</a>
+			|
+			<a class="footer-link" href="{{ U_TERMS_USE }}" title="{{ lang('TERMS_LINK') }}" role="menuitem">
+				<span class="footer-link-text">{{ lang('TERMS_LINK') }}</span>
+			</a>
+		</p>
+		<!-- IF DEBUG_OUTPUT -->
+		<p class="footer-row">
+			<span class="footer-info">{{ DEBUG_OUTPUT }}</span>
+		</p>
+		<!-- ENDIF -->
+		<!-- IF U_ACP -->
+		<p class="footer-row">
+			<a class="footer-link text-strong" href="{{ U_ACP }}">{{ lang('ACP') }}</a>
+		</p>
+		<!-- ENDIF -->
+	</div>
 
 <div>
 	<a id="bottom" class="anchor" accesskey="z"></a>
@@ -64,23 +87,27 @@
 <!-- IF S_COOKIE_NOTICE -->
 	<script src="{T_ASSETS_PATH}/cookieconsent/cookieconsent.min.js?assets_version={T_ASSETS_VERSION}"></script>
 	<script>
-		window.addEventListener("load", function(){
-			window.cookieconsent.initialise({
-				"palette": {
-					"popup": {
-						"background": "#0F538A"
+		if (typeof window.cookieconsent === "object") {
+			window.addEventListener("load", function(){
+				window.cookieconsent.initialise({
+					"palette": {
+						"popup": {
+							"background": "#0F538A"
+						},
+						"button": {
+							"background": "#E5E5E5"
+						}
 					},
-					"button": {
-						"background": "#E5E5E5"
+					"theme": "classic",
+					"content": {
+						"message": "{LA_COOKIE_CONSENT_MSG}",
+						"dismiss": "{LA_COOKIE_CONSENT_OK}",
+						"link": "{LA_COOKIE_CONSENT_INFO}",
+						"href": "{UA_PRIVACY}"
 					}
-				},
-				"theme": "classic",
-				"content": {
-					"message": "{LA_COOKIE_CONSENT_MSG}",
-					"dismiss": "{LA_COOKIE_CONSENT_OK}",
-					"link": "{LA_COOKIE_CONSENT_INFO}"
-				}
-			})});
+				});
+			});
+		}
 	</script>
 <!-- ENDIF -->
 

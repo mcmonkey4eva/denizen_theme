@@ -258,7 +258,6 @@ ul.linklist {
 }
 
 ul#nav-breadcrumbs {
-	padding-bottom: 20px;
 }
 
 .cp-main .panel {
@@ -1257,7 +1256,7 @@ ul.linklist:after,
 	margin-left: 3px;
 	vertical-align: baseline;
 	position: relative;
-	top: 3px;
+	top: 6px;
 	padding: 4px 6px;
 }
 

@@ -267,11 +267,11 @@ fieldset.submit-buttons input {
 	resize: vertical;
 	outline: 3px dashed transparent;
 	outline-offset: -4px;
-	-webkit-transition: all .5s ease;
-	-moz-transition: all .5s ease;
-	-ms-transition: all .5s ease;
-	-o-transition: all .5s ease;
-	transition: all .5s ease;
+	-webkit-transition: all .5s ease, height 1ms linear;
+	-moz-transition: all .5s ease, height 1ms linear;
+	-ms-transition: all .5s ease, height 1ms linear;
+	-o-transition: all .5s ease, height 1ms linear;
+	transition: all .5s ease, height 1ms linear;
 }
 
 /* Emoticons panel */
@@ -310,7 +310,7 @@ textarea.inputbox {
 }
 
 input[type="number"] {
-	-moz-padding-end: inherit;
+	-moz-padding-end: 0;
 }
 
 input[type="search"] {
@@ -453,7 +453,7 @@ input.button1:focus, input.button2:focus, input.button3:focus {
 
 .search-header .inputbox { border: 0; }
 
-.linklist > li.responsive-search { display: none; }
+.navbar .linklist > li.responsive-search { display: none; }
 
 input.search {
 	background-image: none;
